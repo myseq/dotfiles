@@ -14,11 +14,12 @@ Here's the basic file structure.
 dotfiles/
 ├── shellstartup         # main startup file
 ├── shell.envs           # All env exports
-├── bash.aliases         # Aliases for BASH
-├── bash.func            # Some BASH functions
-├── zshrc                # ZSH 
-├── zsh.aliases          # Aliases for ZSH
-└── zsh.func             # Some ZSH functions 
+├── private.envs         # Excluded by .gitignore
+├── bash.aliases         # BASH: aliases
+├── bash.func            # BASH: functions
+├── zshrc                # ZSH: zshrc 
+├── zsh.aliases          # ZSH: aliases
+└── zsh.func             # ZSH: functions 
 ```
 
 ### BASH

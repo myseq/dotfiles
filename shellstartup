@@ -35,6 +35,7 @@ fi
 
 # Environment Exports
 source $HOME/dotfiles/shell.envs
+source $HOME/dotfiles/private.envs
 
 
 
