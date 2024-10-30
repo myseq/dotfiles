@@ -1,0 +1,18 @@
+
+## Customization
+#
+export LANG=en_US.UTF-8
+
+export PATH=$PATH:~/.local/bin:$PATH:~/admin:/snap/bin
+export EDITOR=vim
+export PAGER=less
+export LESS=-R
+
+export PYTHONSTARTUP=$HOME/.pythonstartup
+
+# Markdown Viewer Theme setting
+export MDV_THEME=965.9469
+
+
+
+
