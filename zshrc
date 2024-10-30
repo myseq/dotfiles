@@ -147,7 +147,7 @@ if [ "$color_prompt" = yes ]; then
 
     # Set the prompt with colors
     export PROMPT="${LIME}%n${GOLD}@${BBLU}%m${RST}:${GOLD}%~${RST}%# ${RST}"
-    export RPROMPT="${BBLU}[\$(git_prompt_info) ${GOLD}$(date +'%H:%M') ${BBLU}]${RST}"
+    export RPROMPT="${BBLU}[\$(git_prompt_info) ${GOLD}%D{%H:%M} ${BBLU}]${RST}"
 
     # enable syntax-highlighting
     if [ -f /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ] && [ "$color_prompt" = yes ]; then
