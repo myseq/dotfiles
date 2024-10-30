@@ -1,0 +1,70 @@
+## ShellStartUp
+#
+
+# Local variables
+# Extended color codes (256-color)
+LIME_GREEN='\033[38;5;154m'
+ORANGE='\033[38;5;214m'
+PINK='\033[38;5;200m'
+BLUE='\033[38;5;33m'
+RESET='\033[0m'  # Reset to default color
+RST='\033[0m'  # Reset to default color
+LIME='\033[38;5;118m'
+GOLD='\033[38;5;220m'
+BBLU='\033[38;5;099m'
+
+
+# Determine the shell
+if [ -n "$ZSH_VERSION" ]; then
+  CURRENT_SHELL="zsh"
+  #echo "Powered in $CURRENTSHELL: ${(%):-%x}"
+  source $HOME/dotfiles/zsh.func
+  source $HOME/dotfiles/zshrc
+  source $HOME/dotfiles/zsh.aliases
+  #export PROMPT="${LIME}\u${GOLD}@${BBLU}\h${RST}: ${GOLD}\w${RST}$ "
+  #export PS1=$PROMPT
+elif [ -n "$BASH_VERSION" ]; then
+  CURRENT_SHELL="bash"
+  #echo "Powered in $CURRENTSHELL: $BASH_SOURCE"
+  source $HOME/dotfiles/bash.func
+  source $HOME/dotfiles/bash.aliases
+  export PS1="${LIME}\u${GOLD}@${BBLU}\h${RST}: ${GOLD}\w${RST}$ "
+else
+    echo "Not recognized."
+fi
+
+# Environment Exports
+source $HOME/dotfiles/shell.envs
+
+
+
+if [ "$CURRENT_SHELL" = "zsh" ]; then
+    SHELL_JOKE="Why do developers love zsh? Because zsh finishes what bash started!"
+    SHELL_JOKE="${PINK}Why do developers love zsh?${RESET} ${LIME_GREEN}Because zsh finishes what bash started!${RESET}"
+elif [ "$CURRENT_SHELL" = "bash" ]; then
+    SHELL_JOKE="Why do bash users love bash? Because it never zsh-es through things!"
+    SHELL_JOKE="${ORANGE}Why do bash users love bash?${RESET} ${BLUE}Because it never zsh-es through things!${RESET}"
+fi
+
+# Display the current shell and the joke with colors
+echo ""
+echo -e " [*] ${BLUE}Loading ${LIME_GREEN}`which $CURRENT_SHELL`${RESET}..."
+echo -e " 🦉 $SHELL_JOKE"
+echo ""
+
+#if [ -n "`$SHELL -c 'echo $ZSH_VERSION'`" ]; then
+   # assume Zsh
+   #zsh custom_script.sh
+#  echo ZSH
+#elif [ -n "`$SHELL -c 'echo $BASH_VERSION'`" ]; then
+   # assume Bash
+   #sh custom_script.sh
+#   echo BASH
+#else
+#echo FISH
+#fi
+
+
+
+
+

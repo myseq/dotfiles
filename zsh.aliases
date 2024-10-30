@@ -1,0 +1,22 @@
+
+# $HOME/dotfiles/zsh.aliases
+
+alias -g ls='ls -Fh --color'
+alias -g python='/usr/bin/python3'
+alias history="history -i -D 0"
+
+alias df='df -Th -t lxfs' 
+alias zz='source ~/.zshrc'
+alias viz='vi ~/.zshrc'
+
+alias pbcopy='xsel --input --clipboard'
+alias pbpaste='xsel --output --clipboard'
+
+alias grep='grep --color=auto'
+alias fgrep='fgrep --color=auto'
+alias egrep='egrep --color=auto'
+alias diff='diff --color=auto'
+alias ip='ip --color=auto'
+alias free='free -h'
+
+

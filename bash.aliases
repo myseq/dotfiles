@@ -1,0 +1,20 @@
+
+# $HOME/dotfiles/bash.aliases
+
+alias python='/usr/bin/python3'
+alias df='df -Th -t lxfs' 
+alias bb='source ~/.bashrc'
+alias vib='vi ~/.bashrc'
+alias ls='ls -Fh --color'
+
+alias pbcopy='xsel --input --clipboard'
+alias pbpaste='xsel --output --clipboard'
+
+alias grep='grep --color=auto'
+alias fgrep='fgrep --color=auto'
+alias egrep='egrep --color=auto'
+alias diff='diff --color=auto'
+alias ip='ip --color=auto'
+alias free='free -h'
+
+
