@@ -13,6 +13,7 @@ Here's the basic file structure.
 ```bash
 dotfiles/
 ├── shellstartup         # main startup file
+├── shell.envs           # All env exports
 ├── bash.aliases         # Aliases for BASH
 ├── bash.func            # Some BASH functions
 ├── zshrc                # ZSH 
