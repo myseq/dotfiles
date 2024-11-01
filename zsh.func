@@ -13,3 +13,21 @@ function git_prompt_info()
   fi
 }
 
+# Store the original prompt
+ORIGINAL_PROMPT=$PROMPT
+
+function set_virtualenv_prompt() {
+    if [ -n "$VIRTUAL_ENV" ]; then
+        # Extract the name of the virtual environment from the path
+        VENV_NAME=$(basename "$VIRTUAL_ENV")
+        # Set the prompt to include the venv name
+        #PROMPT="%F{green}($VENV_NAME) %F{reset}%n@%m %F{blue}%~ %F{reset}%# "
+        PROMPT="%F{cyan}($VENV_NAME) $ORIGINAL_PROMPT"
+    else
+        # Restore the original prompt when not in a venv
+        PROMPT="$ORIGINAL_PROMPT"
+    fi
+}
+
+# Call the function whenever the prompt is displayed
+precmd_functions+=(set_virtualenv_prompt)
