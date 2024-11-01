@@ -18,8 +18,8 @@ BBLU='\033[38;5;099m'
 if [ -n "$ZSH_VERSION" ]; then
   CURRENT_SHELL="zsh"
   #echo "Powered in $CURRENTSHELL: ${(%):-%x}"
-  source $HOME/dotfiles/zsh.func
   source $HOME/dotfiles/zshrc
+  source $HOME/dotfiles/zsh.func
   source $HOME/dotfiles/zsh.aliases
   #export PROMPT="${LIME}\u${GOLD}@${BBLU}\h${RST}: ${GOLD}\w${RST}$ "
   #export PS1=$PROMPT
