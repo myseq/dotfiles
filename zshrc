@@ -138,16 +138,17 @@ setopt PROMPT_SUBST
 
 # Color definitions
 RST='%{$(printf "\033[0m")%}'        # Reset to default color
-LIME='%{$(printf "\033[38;5;118m")%}'  # Lime color
+LIME='%{$(printf "\033[38;5;118m")%}'  # Lime color #7FFF00
 GOLD='%{$(printf "\033[38;5;220m")%}'  # Gold color
 BBLU='%{$(printf "\033[38;5;099m")%}'  # Bright blue color
+DYEL='%{$(printf "\033[38;5;154m")%}'  # Dynamic Yellow #DFFF00
 
 
 if [ "$color_prompt" = yes ]; then
 
     # Set the prompt with colors
     export PROMPT="${LIME}%n${GOLD}@${BBLU}%m${RST}:${GOLD}%~${RST}%# ${RST}"
-    export RPROMPT="${BBLU}[\$(git_prompt_info) ${GOLD}%D{%H:%M} ${BBLU}]${RST}"
+    export RPROMPT="${BBLU}[\$(git_prompt_info) ${DYEL}%D{%H:%M} ${BBLU}]${RST}"
 
     # enable syntax-highlighting
     if [ -f /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ] && [ "$color_prompt" = yes ]; then
