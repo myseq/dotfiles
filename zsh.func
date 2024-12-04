@@ -1,6 +1,21 @@
 #
 # $HOME/dotfiles/zsh.func
 
+RST='\033[0m'  # Reset to default color
+PINK='\033[38;5;200m'
+LIME='\033[38;5;148m'
+
+function gsource()
+{
+  repo=$(basename "$PWD")
+  fact="../venv/$repo/bin/activate"
+  if [ -e $fact ]; then
+    source $fact
+  else
+    echo "No ${PINK}venv${RST} for ${LIME}${repo}${RST}".
+  fi
+}
+
 # Find and set branch name var if in git repository.
 function git_prompt_info()
 {
