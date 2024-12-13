@@ -12,6 +12,8 @@ RST='\033[0m'  # Reset to default color
 LIME='\033[38;5;118m'
 GOLD='\033[38;5;220m'
 BBLU='\033[38;5;099m'
+ITLC='\033[3m'
+NORM='\033[23m'
 
 
 # Determine the shell
@@ -41,7 +43,7 @@ source $HOME/dotfiles/private.envs
 
 if [ "$CURRENT_SHELL" = "zsh" ]; then
     SHELL_JOKE="Why do developers love zsh? Because zsh finishes what bash started!"
-    SHELL_JOKE="${PINK}Why do developers love zsh?${RESET} ${LIME_GREEN}Because zsh finishes what bash started!${RESET}"
+    SHELL_JOKE="${ITLC}${PINK}Why do developers love zsh?${RESET} ${ITLC}${LIME_GREEN}Because zsh finishes what bash started!${RESET}"
 elif [ "$CURRENT_SHELL" = "bash" ]; then
     SHELL_JOKE="Why do bash users love bash? Because it never zsh-es through things!"
     SHELL_JOKE="${ORANGE}Why do bash users love bash?${RESET} ${BLUE}Because it never zsh-es through things!${RESET}"
@@ -49,7 +51,7 @@ fi
 
 # Display the current shell and the joke with colors
 echo ""
-echo -e " [*] ${BLUE}Loading ${LIME_GREEN}`which $CURRENT_SHELL`${RESET}..."
+echo -e " [*] ${ITLC}${BLUE}Loading ${LIME_GREEN}`which $CURRENT_SHELL`${RESET}..."
 echo -e " 🦉 $SHELL_JOKE"
 echo ""
 
