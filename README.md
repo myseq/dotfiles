@@ -4,6 +4,9 @@ This includes all my `dotfiles` setup/config.
 
 And everything start from `shellstartup`.
 
+> To update, simple `git pull --rebase`.
+> It simply combining your local changes with the latest published changes on your remote.
+
 ## Begin 
 
 Everything start from `shellstartup`.
