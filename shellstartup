@@ -49,6 +49,16 @@ elif [ "$CURRENT_SHELL" = "bash" ]; then
     SHELL_JOKE="${ORANGE}Why do bash users love bash?${RESET} ${BLUE}Because it never zsh-es through things!${RESET}"
 fi
 
+# Default to Wayland mode
+# /etc/gdm3/custom.conf
+# WaylandEnable=true
+# sudo systemctl restart gdm3
+
+# Firefox wayland:
+if [ "$XDG_SESSION_TYPE" == "wayland" ]; then
+    export MOZ_ENABLE_WAYLAND=1
+fi
+
 # Display the current shell and the joke with colors
 echo ""
 echo -e " [*] ${ITLC}${BLUE}Loading ${LIME_GREEN}`which $CURRENT_SHELL`${RESET}..."
