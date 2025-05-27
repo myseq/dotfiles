@@ -5,7 +5,7 @@ alias -g ls='ls -Fh --color'
 alias -g python='/usr/bin/python3'
 alias history="history -i -D 0"
 
-alias df='df -Th -t lxfs' 
+alias df='df -Th -t ext4' 
 alias zz='source ~/.zshrc'
 alias viz='vi ~/.zshrc'
 
