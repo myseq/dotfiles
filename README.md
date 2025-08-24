@@ -15,14 +15,19 @@ Here's the basic file structure.
 
 ```bash
 dotfiles/
-├── shellstartup         # main startup file
-├── shell.envs           # All env exports
-├── private.envs         # Excluded by .gitignore
-├── bash.aliases         # BASH: aliases
-├── bash.func            # BASH: functions
-├── zshrc                # ZSH: zshrc 
-├── zsh.aliases          # ZSH: aliases
-└── zsh.func             # ZSH: functions 
+├── bash.aliases        # BASH: aliases
+├── bash.func           # BASH: functions
+├── gitconfig           # git config file
+├── private.envs        # Excluded by .gitignore
+├── profiles            # Folder: profile pictures
+├── pythonstartup       # Python startup file
+├── shell.envs          # All env exports
+├── shellstartup        # main startup file
+├── utils               # Folder: utilities/scripts
+├── vimrc               # vim config file
+├── zsh.aliases         # ZSH: aliases
+├── zsh.func            # ZSH: functions
+└── zshrc               # ZSH: zshrc
 ```
 
 ### BASH
