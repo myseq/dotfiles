@@ -74,8 +74,11 @@ if [ "$XDG_SESSION_TYPE" == "wayland" ]; then
     export MOZ_ENABLE_WAYLAND=1
 fi
 
+DARK_MODE="\033[38;5;099mWhy do programmers prefer dark mode? 💡 \033[3m\033[38;5;220mBecause light attracts bugs!${RESET}"
+
 # Display the current shell and the joke with colors
 echo ""
+echo -e " $DARK_MODE 🐛\n"
 echo -e " [*] ${ITLC}${BLUE}Loading ${LIME_GREEN}`which $CURRENT_SHELL`${RESET}..."
 echo -e " 🦉 $SHELL_JOKE"
 echo ""
