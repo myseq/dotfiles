@@ -48,5 +48,11 @@ Append the following line to the end `.zshrc`.
 source $HOME/dotfiles/shellstartup
 ```
 
+### Markdown Viewer (mdv)
+
+```console
+% sudo apt install python3-pip
+% pip3 install mdv --break-system-packages 
+```
 
 
