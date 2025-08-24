@@ -36,9 +36,24 @@ else
 fi
 
 # Environment Exports
-source $HOME/dotfiles/shell.envs
-source $HOME/dotfiles/private.envs
+#source $HOME/dotfiles/shell.envs
+#source $HOME/dotfiles/private.envs
 
+FILE="$HOME/dotfiles/shell.envs"
+if [[ -e "$FILE" ]]; then
+  #echo "File or directory exists."
+  source $FILE
+else
+  echo -e " [!] ${ITLC}File or directory ($FILE) does not exist.${RESET}"
+fi
+
+FILE="$HOME/dotfiles/private.envs"
+if [[ -e "$FILE" ]]; then
+  #echo "File or directory exists."
+  source $FILE
+else
+  echo -e " [!] ${ITLC}File or directory ($FILE) does not exist.${RESET}"
+fi
 
 
 if [ "$CURRENT_SHELL" = "zsh" ]; then
@@ -76,8 +91,5 @@ echo ""
 #else
 #echo FISH
 #fi
-
-
-
 
 
