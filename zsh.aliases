@@ -2,10 +2,10 @@
 # $HOME/dotfiles/zsh.aliases
 
 alias -g ls='ls -Fh --color'
-alias -g python='/usr/bin/python3'
+#alias -g python='/usr/bin/python3'
 alias history="history -i -D 0"
 
-alias df='df -Th -t ext4' 
+alias df='df -Th -t lxfs' 
 alias zz='source ~/.zshrc'
 alias viz='vi ~/.zshrc'
 
