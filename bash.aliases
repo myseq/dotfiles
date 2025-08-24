@@ -2,7 +2,7 @@
 # $HOME/dotfiles/bash.aliases
 
 alias python='/usr/bin/python3'
-alias df='df -Th -t ext4' 
+alias df='df -Th -t lxfs' 
 alias bb='source ~/.bashrc'
 alias vib='vi ~/.bashrc'
 alias ls='ls -Fh --color'
