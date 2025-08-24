@@ -19,11 +19,11 @@ dotfiles/
 ├── bash.func           # BASH: functions
 ├── gitconfig           # git config file
 ├── private.envs        # Excluded by .gitignore
-├── profiles            # Folder: profile pictures
+├── profiles/           # Folder: profile pictures
 ├── pythonstartup       # Python startup file
 ├── shell.envs          # All env exports
 ├── shellstartup        # main startup file
-├── utils               # Folder: utilities/scripts
+├── utils/              # Folder: utilities/scripts
 ├── vimrc               # vim config file
 ├── zsh.aliases         # ZSH: aliases
 ├── zsh.func            # ZSH: functions
