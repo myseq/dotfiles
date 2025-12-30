@@ -60,4 +60,10 @@ source $HOME/dotfiles/shellstartup
 % pip3 install mdv --break-system-packages 
 ```
 
+## Troubleshoot
+
+To setup the `.gitconfig`: `ln -s dotfiles/gitconfig ~/.gitconfig`
+
+To reset the Git repo remote-url from HTTPS to SSH: `git remote set-url origin git@github.com:myseq/dotfiles.git`
+
 
