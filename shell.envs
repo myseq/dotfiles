@@ -13,6 +13,12 @@ export PYTHONSTARTUP=$HOME/.pythonstartup
 # Markdown Viewer Theme setting
 export MDV_THEME=965.9469
 
+# BAT Configuration
+export BAT_CONFIG_PATH="~/dotfile/bat.config"
+export BAT_CONFIG_DIR="~/dotfile"
+export BAT_THEME="TwoDark"
 
+# Disable MkDocs 2.0 warning
+export NO_MKDOCS_2_WARNING=1
 
 
