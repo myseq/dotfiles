@@ -1,7 +1,10 @@
-
-"## ~/.vimrc
-"# ln -s dotfiles/vimrc ~/.vimrc
-"#
+"### This file is intented for full Vim, not vim-tiny (default)
+"### $ sudo apt install vim-nox
+"### $ vim --version
+"
+"### ~/.vimrc
+"### $ ln -s dotfiles/vimrc ~/.vimrc
+"###
 
 set nocompatible            " disable compatibility to old-time vi
 set showmatch               " show matching
@@ -28,6 +31,9 @@ set ttyfast                 " Speed up scrolling in Vim
 " set noswapfile            " disable creating swap file
 " set backupdir=~/.cache/vim " Directory to store backup files.
 set showcmd
+set backspace=indent,eol,start " restore modern behavior
+set encoding=utf-8
+set fileencodings=utf-8,latin1
 
 au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 
