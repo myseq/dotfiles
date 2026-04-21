@@ -2,6 +2,8 @@
 ## Customization
 #
 export LANG=en_US.UTF-8
+export LC_ALL=en_US.UTF-8
+export LC_CTYPE=en_US.UTF-8
 
 export PATH=$PATH:~/.local/bin:$PATH:~/admin:/snap/bin
 export EDITOR=vim
@@ -21,4 +23,6 @@ export BAT_THEME="TwoDark"
 # Disable MkDocs 2.0 warning
 export NO_MKDOCS_2_WARNING=1
 
+## Setting timezone
+# sudo timedatectl set-timezone Asia/Singapore
 
