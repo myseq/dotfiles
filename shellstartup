@@ -12,9 +12,21 @@ RST='\033[0m'  # Reset to default color
 LIME='\033[38;5;118m'
 GOLD='\033[38;5;220m'
 BBLU='\033[38;5;099m'
-ITLC='\033[3m'
+ITLC='\033[3m'  # Italic style
 NORM='\033[23m'
 
+## Fro resolving the 'ghost character' (non-printing characters) issue
+#LIME_GREEN="\[\033[38;5;154m\]"
+#ORANGE="\[\033[38;5;214m\]"
+#PINK="\[\033[38;5;200m\]"
+#BLUE="\[\033[38;5;33m\]"
+#RESET="\[\033[0m\]"  # Reset to default color
+#RST="\[\033[0m\]"  # Reset to default color
+#LIME="\[\033[38;5;118m\]"
+#GOLD="\[\033[38;5;220m\]"
+#BBLU="\[\033[38;5;099m\]"
+#ITLC="\[\033[3m\]"   #Italic style
+#NORM="\[\033[23m\]"
 
 # Determine the shell
 if [ -n "$ZSH_VERSION" ]; then
@@ -30,7 +42,8 @@ elif [ -n "$BASH_VERSION" ]; then
   #echo "Powered in $CURRENTSHELL: $BASH_SOURCE"
   source $HOME/dotfiles/bash.func
   source $HOME/dotfiles/bash.aliases
-  export PS1="${LIME}\u${GOLD}@${BBLU}\h${RST}: ${GOLD}\w${RST}$ "
+  #export PS1="${LIME}\u${GOLD}@${BBLU}\h${RST}: ${GOLD}\w${RST}$ "
+  export PS1="\[${LIME}\]\u\[${GOLD}\]@\[${BBLU}\]\h\[${RST}\]:\[${GOLD}\]\w\[${RST}\]\$ "
 else
     echo "Not recognized."
 fi
